@@ -44,6 +44,6 @@ if data_file is not None:
       fig, ax = plt.subplots()
       ax.scatter(x=df[col], y=df[output])
       plt.xlabel(col)
-      plt.ylabel(Quatity)
+      plt.ylabel(output)
       st.pyplot(fig)
   
