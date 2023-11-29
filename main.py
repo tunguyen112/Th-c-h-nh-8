@@ -40,7 +40,7 @@ if data_file is not None:
 
   st.header('Show relationship between variables')
   for col in list(df.columns):
-    if col != ouput:
+    if col != output:
       fig, ax = plt.subplots()
       ax.scatter(x=df[col], y=df[output])
       plt.xlabel(col)
