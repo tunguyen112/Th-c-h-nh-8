@@ -35,3 +35,15 @@ if data_file is not None:
   fig, ax = plt.subplots()
   sns.heatmap(df.corr(method='pearson'), ax=ax, vmax=1, square=True, annot=True, cmap='Greens')
   st.write(fig)
+
+  output = st.radio('Choose a depend variable', df.columns)
+
+  st.header('Show relationship between variables')
+  for col in list(df.columns):
+    if col != ouput:
+      fig, ax = plt.subplots()
+      ax.scatter(x=df[col], y=df[output])
+      plt.xlabel(col)
+      plt.ylabel(Quatity)
+      st.pyplot(fig)
+  
