@@ -12,4 +12,7 @@ if data_file is not None:
   st.header('Show data')
   st.dataframe(df)
 
+  st.header('Descriptive statistics')
+  st.table(df.describe())
+
 
